@@ -50,6 +50,64 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("scroll", navbarlinksActive);
 
   /**
+   * Location slider
+   */
+  new Swiper(".location-slider", {
+    speed: 600,
+    loop: false,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+  /**
+   * testmoniols
+   */
+  new Swiper(".location-slider-2", {
+    speed: 600,
+    loop: false,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+  /**
    * Mobile nav toggle
    */
   const mobileNavShow = document.querySelector(".mobile-nav-show");

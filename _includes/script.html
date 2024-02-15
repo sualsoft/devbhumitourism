@@ -9,3 +9,44 @@
 
 <!-- Template Main JS File -->
 <script src="/assets/js/main.js"></script>
+
+<script>
+  document
+    .getElementById("toggleButton")
+    .addEventListener("click", function () {
+      var paragraph = document.getElementById("visible");
+      if (paragraph.classList.contains("d-none")) {
+        paragraph.classList.remove("d-none");
+        this.innerText = "Hide Content";
+      } else {
+        paragraph.classList.add("d-none");
+        this.innerText = "Read More";
+      }
+    });
+
+  document
+    .getElementById("toggleButton2")
+    .addEventListener("click", function () {
+      var paragraph = document.getElementById("visible2");
+      if (paragraph.classList.contains("d-none")) {
+        paragraph.classList.remove("d-none");
+        this.innerText = "Hide Content";
+      } else {
+        paragraph.classList.add("d-none");
+        this.innerText = "Read More";
+      }
+    });
+
+  document
+    .getElementById("toggleButton3")
+    .addEventListener("click", function () {
+      var paragraph = document.getElementById("visible3");
+      if (paragraph.classList.contains("d-none")) {
+        paragraph.classList.remove("d-none");
+        this.innerText = "Hide Content";
+      } else {
+        paragraph.classList.add("d-none");
+        this.innerText = "Read More";
+      }
+    });
+</script>
