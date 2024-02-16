@@ -173,7 +173,7 @@ section {
 }
 
 .topbar .social-links a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 1);
   line-height: 0;
   transition: 0.3s;
   margin-left: 20px;
@@ -200,6 +200,10 @@ section {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 }
 
+.blog-header .sticked {
+  background-color: #fff !important;
+}
+
 .header .logo img {
   max-height: 40px;
   margin-right: 6px;
@@ -207,6 +211,170 @@ section {
 
 .sticked-header-offset {
   margin-top: 70px;
+}
+
+/* Blog-details Section - Blog Details Page
+------------------------------*/
+.blog-details .article {
+  box-shadow: 0 4px 16px rgba(var(--default-color-rgb), 0.1);
+  padding: 30px;
+}
+
+.blog-details .title {
+  font-size: 48px;
+  font-weight: bold;
+}
+.blog-details .content {
+  margin-top: 20px;
+}
+.blog-details .content {
+}
+
+.blog-details .content table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.blog-details .content table td,
+.blog-details .content table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.blog-details .content table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: #000;
+}
+
+.blog-details .content h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.blog-details .content blockquote {
+  overflow: hidden;
+  background-color: rgba(var(--default-color-rgb), 0.05);
+  padding: 60px;
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.blog-details .content blockquote p {
+  color: var(--default-color);
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.blog-details .content blockquote:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.blog-details .content img {
+  max-width: 100%;
+}
+.blog-details .content iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-details .sidebar {
+  padding: 30px;
+  box-shadow: 0 4px 16px rgba(var(--default-color-rgb), 0.1);
+}
+
+.blog-details .sidebar .sidebar-title {
+  color: #057500;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-details .sidebar .sidebar-item + .sidebar-item {
+  margin-top: 40px;
+}
+
+.blog-details .sidebar .search-form form {
+  background: #fff;
+  border: 1px solid #057500;
+  padding: 3px 10px;
+  position: relative;
+}
+
+.blog-details .sidebar .search-form form input[type="text"] {
+  border: 0;
+  padding: 4px;
+  border-radius: 4px;
+  width: calc(100% - 40px);
+  background-color: #fff;
+  color: #000;
+}
+
+.blog-details .sidebar .search-form form input[type="text"]:focus {
+  outline: none;
+}
+
+.blog-details .sidebar .search-form form button {
+  background: #057500;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  font-size: 16px;
+  padding: 0 15px;
+  margin: -1px;
+  transition: 0.3s;
+  border-radius: 0 4px 4px 0;
+  line-height: 0;
+}
+
+.blog-details .sidebar .search-form form button i {
+  line-height: 0;
+}
+
+.blog-details .sidebar .search-form form button:hover {
+  background: rgba(var(--accent-color-rgb), 0.8);
+}
+
+.blog-details .sidebar .categories ul {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-details .sidebar .categories ul li + li {
+  padding-top: 10px;
+}
+
+.blog-details .sidebar .categories ul a {
+  color: rgba(var(--default-color-rgb), 0.8);
+  transition: 0.3s;
+}
+
+.blog-details .sidebar .categories ul a:hover {
+  color: var(--accent-color);
+}
+
+.blog-details .sidebar .categories ul a span {
+  padding-left: 5px;
+  color: rgba(var(--default-color-rgb), 0.5);
+  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -244,7 +412,7 @@ section {
     font-family: var(--font-primary);
     font-size: 16px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 1);
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
@@ -406,6 +574,14 @@ section {
     z-index: 9996;
   }
 }
+.blog-header .navbar a,
+.blog-header .topbar i,
+.blog-header .topbar i a,
+.blog-header .topbar p,
+.blog-header .topbar i span,
+.blog-header .topbar .social-links a {
+  color: #000 !important;
+}
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -419,6 +595,11 @@ section {
   background-repeat: no-repeat;
   padding: 60px 0 60px 0;
   margin-top: -200px;
+}
+.hero-height {
+  position: relative;
+  padding: 60px 0 60px 0;
+  margin-top: -150px;
 }
 .hero::before {
   content: "";
@@ -477,6 +658,12 @@ section {
 @media (min-width: 1365px) {
   .hero {
     background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .btn {
+    flex-direction: column;
   }
 }
 
@@ -661,6 +848,10 @@ section {
   background-color: #f9ae00;
   font-family: var(--font-primary) !important;
 }
+.bg-ash {
+  background-color: #f3f3f3;
+  font-family: var(--font-primary) !important;
+}
 .mine {
   border-radius: 100%;
   margin-top: 1rem;
@@ -782,6 +973,62 @@ input#tourstart.form-control {
   background-color: #4c4c4c;
   color: #fff;
 }
+
+/* Recent-posts Section - Home Page
+------------------------------*/
+.recent-posts article {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.recent-posts .post-img {
+  max-height: 240px;
+  margin: -30px -30px 15px -30px;
+  overflow: hidden;
+}
+
+.recent-posts .post-category {
+  font-size: 16px;
+  color: rgba(var(--default-color-rgb), 0.5);
+  margin-bottom: 10px;
+}
+
+.recent-posts .title {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.recent-posts .title a {
+  color: var(--heading-color);
+  transition: 0.3s;
+}
+
+.recent-posts .title a:hover {
+  color: var(--accent-color);
+}
+
+.recent-posts .post-author-img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.recent-posts .post-author {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.recent-posts .post-date {
+  font-size: 14px;
+  color: rgba(var(--default-color-rgb), 0.5);
+  margin-bottom: 0;
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
