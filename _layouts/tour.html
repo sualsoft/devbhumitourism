@@ -17,11 +17,373 @@
                 <p>{{page.sub_head}}</p>
                 <h2 class="title">{{ page.title}}</h2>
 
-                <div class="content">{{ content }}</div>
+                <div class="content">{{ page.description }}</div>
                 <!-- End post content -->
-                {% include top_info.html %} {% include botton_info.html %}
               </article>
               <!-- End post article -->
+
+              <!-- ======= Tabs Section ======= -->
+              <section id="tabs" class="tabs">
+                <div class="container" data-aos="fade-up">
+                  <ul class="nav nav-tabs row d-flex">
+                    <li class="nav-item col-lg-2 col-md-6">
+                      <a
+                        class="nav-link active show"
+                        data-bs-toggle="tab"
+                        data-bs-target="#tab-1"
+                      >
+                        <h4 class="d-none d-lg-block">Information</h4>
+                      </a>
+                    </li>
+
+                    <li class="nav-item col-lg-2 col-md-6">
+                      <a
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#tab-2"
+                      >
+                        <h4 class="d-none d-lg-block">Tour Plan</h4>
+                      </a>
+                    </li>
+
+                    <li class="nav-item col-lg-2 col-md-6">
+                      <a
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#tab-3"
+                      >
+                        <h4 class="d-none d-lg-block">Location</h4>
+                      </a>
+                    </li>
+
+                    <li class="nav-item col-lg-2 col-md-6">
+                      <a
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#tab-4"
+                      >
+                        <i class="ri-store-line"></i>
+                        <h4 class="d-none d-lg-block">Gallery</h4>
+                      </a>
+                    </li>
+
+                    <li class="nav-item col-lg-2 col-md-6">
+                      <a
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#tab-5"
+                      >
+                        <i class="ri-store-line"></i>
+                        <h4 class="d-none d-lg-block">Additional Info</h4>
+                      </a>
+                    </li>
+
+                    <li class="nav-item col-lg-2 col-md-6">
+                      <a
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#tab-6"
+                      >
+                        <i class="ri-store-line"></i>
+                        <h4 class="d-none d-lg-block">Similar Tours</h4>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div class="tab-content">
+                    <div class="tab-pane active show" id="tab-1">
+                      <div class="row">
+                        <div class="col-lg-12 mt-3 mt-lg-0">{{ content}}</div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="tab-2">
+                      <div class="row">
+                        <div class="col-lg-12 mt-3 mt-lg-0">{{ content}}</div>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="tab-3">
+                      <div class="row">
+                        <div class="col-lg-12 mt-3 mt-lg-0">{{ content}}</div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="tab-4">
+                      <div class="row">
+                        {% for image in page.gallery %}
+                        <div class="col-lg-6 p-3 mt-3 mt-lg-0">
+                          <img
+                            src="{{ image }}"
+                            alt="Gallery"
+                            class="img-fluid"
+                          />
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="tab-5">
+                      <div class="row">
+                        <div class="col-lg-12 mt-3 mt-lg-0">{{ content}}</div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="tab-6">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <section class="package">
+                            <div class="container">
+                              <div class="row justify-content-center">
+                                <div class="col-lg-3 col-md-4 mb-5">
+                                  <div class="card">
+                                    <div class="price">
+                                      <p>Ex Delhi</p>
+                                      <h6>₹24750</h6>
+                                    </div>
+                                    <div class="img">
+                                      <img
+                                        src="/assets/img/package/1.png"
+                                        alt="Package"
+                                      />
+                                    </div>
+                                    <div class="info">
+                                      <h4>
+                                        Haridwar Mussoorie Rishikesh Nainital
+                                        Kausani
+                                      </h4>
+                                    </div>
+                                    <hr />
+                                    <a href="/" class="stretched-link">
+                                      <i class="bi bi-clock"></i>
+                                      <p>10N/11D</p>
+                                    </a>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 mb-5">
+                                  <div class="card">
+                                    <div class="price">
+                                      <p>Ex Delhi</p>
+                                      <h6>₹22500</h6>
+                                    </div>
+                                    <div class="img">
+                                      <img
+                                        src="/assets/img/package/2.png"
+                                        alt="Package"
+                                      />
+                                    </div>
+                                    <div class="info">
+                                      <h4>Mesmerizing Uttarakhand Tour</h4>
+                                    </div>
+                                    <hr />
+                                    <a href="/" class="stretched-link">
+                                      <i class="bi bi-clock"></i>
+                                      <p>9N/10D</p>
+                                    </a>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 mb-5">
+                                  <div class="card">
+                                    <div class="price">
+                                      <p>Ex Dehradun</p>
+                                      <h6><span>₹11250 </span>₹9375</h6>
+                                    </div>
+                                    <div class="img">
+                                      <img
+                                        src="/assets/img/package/3.png"
+                                        alt="Package"
+                                      />
+                                    </div>
+                                    <div class="info">
+                                      <h4>Chopta With Auli Tour</h4>
+                                    </div>
+                                    <hr />
+                                    <a href="/" class="stretched-link">
+                                      <i class="bi bi-clock"></i>
+                                      <p>4N/5D</p>
+                                    </a>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 mb-5">
+                                  <div class="card">
+                                    <div class="price">
+                                      <p>Ex Delhi</p>
+                                      <h6>₹13500</h6>
+                                    </div>
+                                    <div class="img">
+                                      <img
+                                        src="/assets/img/package/4.png"
+                                        alt="Package"
+                                      />
+                                    </div>
+                                    <div class="info">
+                                      <h4>Nainital Almora Corbett Tour</h4>
+                                    </div>
+                                    <hr />
+                                    <a href="/" class="stretched-link">
+                                      <i class="bi bi-clock"></i>
+                                      <p>5N/6D</p>
+                                    </a>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 mb-5">
+                                  <div class="card">
+                                    <div class="price">
+                                      <p>Ex Delhi</p>
+                                      <h6>₹15750</h6>
+                                    </div>
+                                    <div class="img">
+                                      <img
+                                        src="/assets/img/package/5.png"
+                                        alt="Package"
+                                      />
+                                    </div>
+                                    <div class="info">
+                                      <h4>
+                                        Nainital Almora Kausani Ranikhet Corbett
+                                        Tour
+                                      </h4>
+                                    </div>
+                                    <hr />
+                                    <a href="/" class="stretched-link">
+                                      <i class="bi bi-clock"></i>
+                                      <p>6N/7D</p>
+                                    </a>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 mb-5">
+                                  <div class="card">
+                                    <div class="price">
+                                      <p>Ex Delhi</p>
+                                      <h6>₹15750</h6>
+                                    </div>
+                                    <div class="img">
+                                      <img
+                                        src="/assets/img/package/6.png"
+                                        alt="Package"
+                                      />
+                                    </div>
+                                    <div class="info">
+                                      <h4>Mussoorie Nainital Corbett Tour</h4>
+                                    </div>
+                                    <hr />
+                                    <a href="/" class="stretched-link">
+                                      <i class="bi bi-clock"></i>
+                                      <p>6N/7D</p>
+                                    </a>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 mb-5">
+                                  <div class="card">
+                                    <div class="price">
+                                      <p>Ex Delhi</p>
+                                      <h6>₹11250</h6>
+                                    </div>
+                                    <div class="img">
+                                      <img
+                                        src="/assets/img/package/7.png"
+                                        alt="Package"
+                                      />
+                                    </div>
+                                    <div class="info">
+                                      <h4>Rishikesh Mussoorie Tour</h4>
+                                    </div>
+                                    <hr />
+                                    <a href="/" class="stretched-link">
+                                      <i class="bi bi-clock"></i>
+                                      <p>4N/5D</p>
+                                    </a>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 mb-5">
+                                  <div class="card">
+                                    <div class="price">
+                                      <p>Ex Delhi</p>
+                                      <h6>₹11250</h6>
+                                    </div>
+                                    <div class="img">
+                                      <img
+                                        src="/assets/img/package/8.png"
+                                        alt="Package"
+                                      />
+                                    </div>
+                                    <div class="info">
+                                      <h4>
+                                        Corbett Rishikesh Dehradun Mussoorie
+                                        Tour
+                                      </h4>
+                                    </div>
+                                    <hr />
+                                    <a href="/" class="stretched-link">
+                                      <i class="bi bi-clock"></i>
+                                      <p>4N/5D</p>
+                                    </a>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 mb-5">
+                                  <div class="card">
+                                    <div class="price">
+                                      <p>Ex Delhi</p>
+                                      <h6>₹11250</h6>
+                                    </div>
+                                    <div class="img">
+                                      <img
+                                        src="/assets/img/package/9.png"
+                                        alt="Package"
+                                      />
+                                    </div>
+                                    <div class="info">
+                                      <h4>Dehradun Rishikesh Mussoorie Tour</h4>
+                                    </div>
+                                    <hr />
+                                    <a href="/" class="stretched-link">
+                                      <i class="bi bi-clock"></i>
+                                      <p>4N/5D</p>
+                                    </a>
+                                  </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 mb-5">
+                                  <div class="card">
+                                    <div class="price">
+                                      <p>Ex Dehradun</p>
+                                      <h6>₹15750</h6>
+                                    </div>
+                                    <div class="img">
+                                      <img
+                                        src="/assets/img/package/10.png"
+                                        alt="Package"
+                                      />
+                                    </div>
+                                    <div class="info">
+                                      <h4>
+                                        Mussoorie Auli Gopeshwar Rishikesh Tour
+                                      </h4>
+                                    </div>
+                                    <hr />
+                                    <a href="/" class="stretched-link">
+                                      <i class="bi bi-clock"></i>
+                                      <p>6N/7D</p>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- End Tabs Section -->
             </div>
 
             <div class="col-lg-3">
