@@ -35,10 +35,10 @@ plugins:
   - jekyll-feed
 
 collections:
-  blog:
+  blogs:
     output: true
 
-  tour:
+  tours:
     output: true
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -3,4 +3,5 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+title: Uttarakhand Tour Packages Tailored For 2024 | Devbhumi Tourism
 ---

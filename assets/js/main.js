@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
 
       1200: {
-        slidesPerView: 5,
+        slidesPerView: 4,
         spaceBetween: 20,
       },
     },
@@ -102,6 +102,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
       1200: {
         slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+  /*
+  Tour slider
+  */
+  new Swiper(".tours-slider", {
+    speed: 600,
+    loop: false,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: "auto",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+
+      1200: {
+        slidesPerView: 5,
         spaceBetween: 20,
       },
     },
