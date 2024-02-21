@@ -614,6 +614,12 @@ section {
 .hero .container {
   position: relative;
   z-index: 99;
+  margin-top: 11rem;
+}
+@media (max-width: 768px) {
+  .hero .container {
+    margin-top: 9rem;
+  }
 }
 
 .hero h3 {
